@@ -24,11 +24,15 @@ body{
     overflow: auto;
     position: relative;
 }
+.container-landing{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
 .landing-01{
     position: fixed;
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    /* position: relative; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -133,6 +137,16 @@ body{
     transition: 200ms;
     text-shadow: 0 1rem .4rem var(--third1);
 }
+.texte-center-change svg{
+    width: 50px;
+    height: 50px;
+    fill: var(--my-white);
+    cursor: pointer;
+    transition: 200ms;
+}
+.texte-center-change svg:active{
+    transform: scale(1.5);
+}
 .adj{
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
     animation: texte 3s alternate-reverse infinite both;
@@ -184,9 +198,112 @@ body{
     background-color: var(--third1);
 }
 .ney-club{
+    margin: 0;
+    padding: 0;
+    position: relative;
     width: 100%;
     height: 100vh;
-    
+    z-index: 30 !important;
+    background-color: var(--third);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.ney-club .list-club{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.list-club .title{
+    font-size: 3rem;
+    color: var(--my-white);
+    position: relative;
+}
+.title::before{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--my-white);
+}
+.img-club{
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  grid-auto-rows:30rem;
+  gap: 2rem;
+  width: 100% !important;
+  height: 60%;
+  overflow-x: hidden;
+
+  /* background-color: red; */
+}
+.club{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 1rem;
+    transform: translateX(-2000px);
+    transition: 500ms ease-in-out;
+}
+.club img{
+    overflow: hidden;
+    min-height: 500px;
+    max-width: 500px;
+    object-position: center;
+    object-fit: contain;
+}
+.club3 img{
+    max-width: 400px !important;
+    width: 100%;
+}
+.club4 img{
+    width: 100%;
+}
+.club h3{
+    color: var(--my-white);
+}
+.anim-club{
+    transform: translateX(0) !important;
+    /* overflow-x: hidden; */
+}
+.list-club .ball{
+    height: 25%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.ball img{
+    max-width: 200px;
+    max-height: 200px;
+    animation: ball 2s alternate 1.5s infinite  both;
+}
+@keyframes ball{
+    0%{
+        /* transform: translateY(0) translateZ(0); */
+        transform: rotate(-40deg);
+        opacity: 0.5;
+    }
+    50%{
+        /* transform: translateY(0) translateZ(0); */
+        /* transform: rotate(40deg); */
+        opacity: 1;
+    }
+    to{
+        /* transform: translateY(-64px) translateZ(-64px); */
+        transform: rotate(40deg);
+        opacity: 0.5;
+    }
 }
 @keyframes texte{
     from{
@@ -197,4 +314,14 @@ body{
         transform: translateY(0) translateZ(0);
         opacity: 1;
     }
+}
+/* video et audio */
+.bi-volume-mute-fill{
+    display: none;
+}
+.v-up{
+    display: flex;
+}
+.v-down{
+    display: none;
 }
