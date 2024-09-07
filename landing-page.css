@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+:root {
+    font-family: "Hammersmith One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-style: normal;
+    --main: #1a73e8;
+    --second: #0C47A1;
+    --my-white: #fff;
+    --third: #202124;
+    --third1: #202124ef;
+};
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: relative;
+}
+.landing-01{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.landing-01 video{
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -10;
+}
+.landing-01::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -9;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+.nav{
+    margin-top: 4vh;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    width: 100%;
+}
+.nav .left{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.left h2{
+    font-size: 4rem;
+    color: var(--my-white);
+    text-shadow: 0 .4rem .5rem var(--main);
+    padding: 0;
+    margin: 0;
+}
+.right{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 4rem;
+}
+.right .contact-btn{
+    height: 5vh;
+    width: 150px;
+    font-size: 1rem;
+    border-radius: 2rem;
+    border: 2px solid var(--my-white);
+    background-color: var(--third);
+    color: var(--my-white);
+    font-weight: bolder;
+    box-shadow: 0 0 .5rem var(--main);
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+}
+.contact-btn:active{
+    transform: scale(.95);
+}
+.right svg{
+    width: 50px;
+    height: 50px;
+    fill: var(--my-white);
+}
+.description{
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   padding: 2rem;
+}
+.description .container-texte{
+    width: 40%;
+    height: 20vh;
+    margin-left: 9rem;
+}
+.container-texte span{
+    color: var(--my-white);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+.texte-center-change{
+    font-size: 4rem;
+    color: var(--my-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 200ms;
+    text-shadow: 0 1rem .4rem var(--third1);
+}
+.adj{
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: texte 3s alternate-reverse infinite both;
+    background-color: var(--third1);
+    padding: 1.5rem;
+    margin-left: 1.5rem;
+    border-radius: 1rem;
+    position: absolute;
+    top: 40%;
+    left: 55%;
+}
+.contact{
+    transform: scale(0);
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 500ms;
+}
+.contact h2{
+    font-size: 2.2rem;
+    color: var(--my-white);
+}
+.contact span{
+    font-size: 1.2rem;
+    color: var(--my-white);
+}
+.contact svg{
+    margin-top: 1rem;
+    height: 50px;
+    width: 50px;
+    fill: var(--my-white);
+    cursor: pointer;
+    transition: 200ms;
+}
+.contact svg:hover{
+    fill: var(--main);
+}
+.contact svg:active{
+    transform: scale(.95);
+}
+.contact-active{
+    transition: 200ms;
+    transform: scale(1);
+    background-color: var(--third1);
+}
+.ney-club{
+    width: 100%;
+    height: 100vh;
+    
+}
+@keyframes texte{
+    from{
+        transform: translateY(64px) translateZ(-64px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0) translateZ(0);
+        opacity: 1;
+    }
+}
