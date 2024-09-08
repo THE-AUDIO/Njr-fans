@@ -526,6 +526,19 @@ span a:hover{
         width: 60% !important;
         margin-left: 2.5rem !important;
     }
+    .ney-club{
+        height: 200vh !important;
+    }
+    .img-club{
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            height: 100% !important;
+            overflow: hidden !important;;
+    }
+    .img-club img{
+        min-height: 400px !important;
+        max-height: 400px !important;
+        object-fit: contain !important;
+    }
 }
 
 
@@ -576,6 +589,20 @@ span a:hover{
     }
     .menue-link .link p{
         width: 80%;
+    }
+    .img-club img{
+        min-height: 300px !important;
+        max-height: 300px !important;
+        max-width: 300px !important;
+        object-fit: contain !important;
+    }
+    .ney-club{
+        height: 150vh !important;
+    }
+    .img-club{
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            height: 100% !important;
+            overflow: hidden !important;;
     }
 }
 
@@ -667,4 +694,20 @@ span a:hover{
     .contact span{
         font-size: .8rem;
     }
+    .ney-club{
+        height: 320vh !important;
+    }
+    .img-club{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        height: 100% !important;
+        overflow: hidden !important;;
+    }
+    .ball{
+        height: 10% !important;
+    }
+}
+@media screen and (max-width: 300px) {
+    .ney-club{
+        height: 350vh !important;
+    } 
 }
