@@ -458,7 +458,7 @@ span a:hover{
     gap: 4rem;
     grid-auto-rows: 20rem;
     overflow-x: hidden;
-    height: 45%;
+    height: 50%;
 }
 
 .tropher-list .tropher-item{
@@ -575,6 +575,38 @@ span a:hover{
     .photo img{
         height: 300px !important;
     }
+
+    .ney-tropher{
+        height: 130vh;
+        background-color: var(--third);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    .tropher-list{
+        height: 80% !important;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+        gap: 2rem !important;
+    }
+    
+    .tropher-item h2{
+        font-size: 1.2rem !important;
+    }
+
+    
+    .desc-tropher{
+    
+        width:60%;
+        border: 1px solid var(--my-white);
+        border-radius: 10px;
+        padding: 2rem;
+    }
+    .desc-tropher p{
+        font-size: 1.2rem;
+    }
+    
 }
 
 
@@ -639,6 +671,14 @@ span a:hover{
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             height: 100% !important;
             overflow: hidden !important;;
+    }
+    .ney-tropher{
+        height: 130vh;
+        background-color: var(--third);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
     }
 }
 
@@ -731,7 +771,7 @@ span a:hover{
         font-size: .8rem;
     }
     .ney-club{
-        height: 320vh !important;
+        height: 180vh !important;
     }
     .img-club{
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -766,9 +806,20 @@ span a:hover{
         width: 80% !important;
         height: 300px !important;
     }
+    .underlined{
+        font-size: 1.5rem !important;
+    }
 }
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 640px) {
     .ney-club{
-        height: 350vh !important;
+        height: 320vh !important;
     } 
+    .ball{
+        width: 5% !important;
+    }
+    .ney-tropher{
+        height: 245vh;
+        background-color: var(--third);
+        overflow-x: hidden !important;
+    }
 }
