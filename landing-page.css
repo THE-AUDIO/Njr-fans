@@ -317,10 +317,12 @@ span a:hover{
 }
 .club img{
     overflow: hidden;
-    min-height: 500px;
-    max-height: 500px;
-    min-width: 400px;
-    max-width: 400px;
+    min-height: 300px;
+    max-height: 350px;
+    min-width: 300px;
+    max-width: 350px;
+    width: 310px;
+    height: 310px;
     object-position: center;
     object-fit: contain;
 }
@@ -339,7 +341,7 @@ span a:hover{
     /* overflow-x: hidden; */
 }
 .list-club .ball{
-    height: 25%;
+    height: 15%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -414,6 +416,9 @@ span a:hover{
 .photo-item .photo{
     width: 45%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .photo-item .photo-desc{
     width: 45%;
@@ -423,7 +428,6 @@ span a:hover{
     justify-content: center;
     flex-direction: column;
     color: var(--my-white);
-    /* background-color: red; */
 }
 .photo-item .photo-desc p{
     font-size: 1.5rem;
@@ -434,8 +438,9 @@ span a:hover{
 .photo img{
     border-radius: 1.5rem !important;
     width: 80%;
-    height: 400px;
-    /* object-fit: cover; */
+    height: 80%;
+    object-fit: cover;
+    object-position: center;
     box-shadow: 0 0 .25em var(--my-white);
 }
 .ney-tropher{
