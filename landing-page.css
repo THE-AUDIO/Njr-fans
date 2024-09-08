@@ -301,7 +301,7 @@ span a:hover{
   gap: 2rem;
   width: 100% !important;
   height: 60%;
-  overflow-x: hidden;
+  overflow: hidden;
 
   /* background-color: red; */
 }
@@ -318,7 +318,9 @@ span a:hover{
 .club img{
     overflow: hidden;
     min-height: 500px;
-    max-width: 500px;
+    max-height: 500px;
+    min-width: 400px;
+    max-width: 400px;
     object-position: center;
     object-fit: contain;
 }
@@ -440,7 +442,7 @@ span a:hover{
     position: relative;
     z-index: inherit;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     background-color: var(--third);
     display: flex;
     align-items: center;

@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const windowHeight = window.innerHeight; // Hauteur intérieure de la fenêtre
             const clubeTob = elt.getBoundingClientRect().top; // Position du haut de l'élément par rapport au haut de la fenêtre
             // const clubBottom = elt.getBoundingClientRect().bottom;
-            if (clubeTob <= windowHeight - 600) {
+            if (clubeTob <= windowHeight - 200) {
                 elt.classList.add('anim-club');
             } else {
                 elt.classList.remove('anim-club');
@@ -87,7 +87,7 @@ document.addEventListener('scroll', function () {
         const windowHeight = window.innerHeight; // Hauteur intérieure de la fenêtre
         const eltTop = elt.getBoundingClientRect().top; // Position du haut de l'élément par rapport au haut de la fenêtre
         // const clubBottom = elt.getBoundingClientRect().bottom;
-        if (eltTop <= windowHeight - 300) {
+        if (eltTop <= windowHeight - 200) {
             elt.classList.add('anim-translate-active');
         } else {
             elt.classList.remove('anim-translate-active');
@@ -101,7 +101,7 @@ document.addEventListener('scroll', function () {
         const windowHeight = window.innerHeight; // Hauteur intérieure de la fenêtre
         const eltTop = elt.getBoundingClientRect().top; // Position du haut de l'élément par rapport au haut de la fenêtre
         // const clubBottom = elt.getBoundingClientRect().bottom;
-        if (eltTop <= windowHeight - 300) {
+        if (eltTop <= windowHeight - 200) {
             elt.classList.add('anim-translate-right-active');
         } else {
             elt.classList.remove('anim-translate-right-active');
