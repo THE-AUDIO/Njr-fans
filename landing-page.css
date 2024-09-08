@@ -648,9 +648,23 @@ span a:hover{
         font-size: .8rem !important;
     }
     .menue-link{
-        width: 500px;
+        width: 250px;
+        padding: 1rem;
+    }
+    .menue-link .link svg{
+        height: 30px;
+        width: 30px;
+    }
+    .menue-link .link span{
+        font-size: 1.5rem;
     }
     .menue-link .link p{
-        width: 80%;
+        width: 100% !important;
+    }
+    .contact h2{
+        font-size: 1rem;
+    }
+    .contact span{
+        font-size: .8rem;
     }
 }
