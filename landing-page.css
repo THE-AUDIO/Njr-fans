@@ -406,6 +406,7 @@ span a:hover{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
     padding: 2rem;
 }
 .photo-item .photo{
@@ -538,6 +539,41 @@ span a:hover{
         min-height: 400px !important;
         max-height: 400px !important;
         object-fit: contain !important;
+    }
+
+    .ney-photo .photo-item{
+        position: relative;
+        width: 95%;
+        height: 50%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding: 2rem;
+    }
+    .photo-item .photo{
+        height: 50% !important;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .photo-item .photo-desc{
+        width: 50%;
+        height: 90%;
+        display: flex;
+        align-items:flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .photo-item .photo-desc p{
+        font-size: 1.1rem !important;
+    }
+    .photo-item .photo-desc h2{
+        font-size: 2.25rem !important;
+
+        
+    }
+    .photo img{
+        height: 300px !important;
     }
 }
 
@@ -704,6 +740,31 @@ span a:hover{
     }
     .ball{
         height: 10% !important;
+    }
+    .ney-photo{
+        height: 200vh !important;
+    }
+    .ney-photo .photo-item{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-direction: column !important;
+        padding: 2rem;
+        border-bottom: 2px solid var(--my-white);
+    }
+    .photo-desc{
+        height: 50% !important;
+        width: 80% !important;
+    }
+    .photo{
+        width: 100% !important;
+        object-fit: contain !important;
+    }
+    .photo img{
+        width: 80% !important;
+        height: 300px !important;
     }
 }
 @media screen and (max-width: 300px) {
