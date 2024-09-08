@@ -175,8 +175,9 @@ span a:hover{
 .description{
    display: flex;
    align-items: center;
-   justify-content: flex-start;
+   justify-content: space-between;
    padding: 2rem;
+   width: 95%;
 }
 .description .container-texte{
     width: 40%;
@@ -188,6 +189,7 @@ span a:hover{
     font-size: 1.5rem;
     letter-spacing: 2px;
 }
+
 .texte-center-change{
     font-size: 4rem;
     color: var(--my-white);
@@ -437,11 +439,11 @@ span a:hover{
     position: relative;
     z-index: inherit;
     width: 100%;
-    height: 50vh;
+    height: 80vh;
     background-color: var(--third);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: column;
 }
 .ney-tropher h2{
@@ -455,7 +457,7 @@ span a:hover{
     gap: 4rem;
     grid-auto-rows: 20rem;
     overflow-x: hidden;
-
+    height: 45%;
 }
 
 .tropher-list .tropher-item{
@@ -471,6 +473,23 @@ span a:hover{
     width: 200px;
     height: 200px;
     object-fit: contain;
+}
+
+.desc-tropher{
+    position: relative;
+    height: 15%;
+    width:40%;
+    border: 2px solid var(--my-white);
+    border-radius: 10px;
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.desc-tropher p{
+    color: var(--my-white);
+    font-size: 1.5rem;
+    margin: 0 auto;
 }
 
 /* classe reutilisable a condition que leur classe parent soient en overflow-x hidden */
@@ -494,4 +513,144 @@ span a:hover{
 .opac{
     opacity: 0;
     transition: 500ms;
+}
+@media screen and (max-width:1425px) {
+    .texte-center-change h2{
+        font-size: 4rem !important;
+    }
+    .description{
+        width: 100% !important;
+        
+    }
+    .container-texte {
+        width: 60% !important;
+        margin-left: 2.5rem !important;
+    }
+}
+
+
+/* Version Tablete */
+@media screen and (max-width:1023px) and (min-width:768px) {
+
+    .left{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .left h2{
+        font-size: 2.5rem !important;
+        margin: 0;
+        padding: 0;
+    }
+    .right{
+        width: 40%;
+        padding-right: 1rem;
+    }
+    .right .contact-btn{
+        height: 4vh;
+        width: 120px;
+        font-size: .9rem;
+        border-radius: 2rem;
+        border: 1.5px solid var(--my-white);
+        box-shadow: 0 0 .25rem var(--main);
+    }   
+    .texte-center-change{
+        width: 95%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .texte-center-change h2{
+        text-align: left;
+    }
+    .texte-center-change .adj{
+        left: 40% !important;
+    }
+    .description .container-texte{
+        width: 80% !important;
+        padding: 0;
+    }
+    .menue-link{
+        width: 500px;
+    }
+    .menue-link .link p{
+        width: 80%;
+    }
+}
+
+/* Version Mobile */
+
+@media  screen and (max-width:768px) {
+    .left{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .left h2{
+        font-size: 1.5rem !important;
+        margin: 0;
+        padding: 0;
+    }
+    .right{
+        width: 50%;
+        padding-right: 0rem;
+    }
+    .right .contact-btn{
+        height: 4vh;
+        width: 90px;
+        font-size: .8rem;
+        border-radius: 2rem;
+        border: 1.5px solid var(--my-white);
+        box-shadow: 0 0 .25rem var(--main);
+    } 
+    .right svg{
+        height: 30px;
+        width: 30px;
+    }
+    .texte-center-change{
+        width: 95%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .texte-center-change h2{
+        text-align: left;
+        font-size: 2rem !important; 
+    }
+    .texte-center-change .adj{
+        padding: 0.5rem !important;
+        left: 30% !important;
+        background-color: black;
+    }
+
+    @keyframes texte{
+        from{
+            transform: translateY(64px) translateZ(-64px);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(10px) translateZ(10px);
+            opacity: 1;
+        }
+    }
+    .texte-center-change svg{
+        height: 30px;
+        width: 30px;
+    }
+    .description .container-texte{
+        width: 90% !important;
+        padding: 0;
+        margin-left: 1rem !important;
+    }
+    .container-texte span{
+        font-size: .8rem !important;
+    }
+    .menue-link{
+        width: 500px;
+    }
+    .menue-link .link p{
+        width: 80%;
+    }
 }
