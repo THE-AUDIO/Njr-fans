@@ -105,7 +105,7 @@ body{
     padding-right: 4rem;
 }
  .menue-link{
-    padding: 4rem;
+    padding: 2.5rem;
     top: 0;
     right: -950px;
     position: absolute;
@@ -196,7 +196,6 @@ span a:hover{
     justify-content: center;
     transition: 200ms;
     text-shadow: 0 1rem .4rem var(--third1);
-    overflow-x: hidden;
 }
 .texte-center-change svg{
     width: 50px;
@@ -428,10 +427,11 @@ span a:hover{
     font-size: 3.5rem;
 }
 .photo img{
-    border-radius: 2rem !important;
+    border-radius: 1.5rem !important;
     width: 80%;
     height: 400px;
     /* object-fit: cover; */
+    box-shadow: 0 0 .25em var(--my-white);
 }
 .ney-tropher{
     position: relative;
@@ -454,6 +454,7 @@ span a:hover{
     grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
     gap: 4rem;
     grid-auto-rows: 20rem;
+    overflow-x: hidden;
 
 }
 
@@ -472,19 +473,25 @@ span a:hover{
     object-fit: contain;
 }
 
+/* classe reutilisable a condition que leur classe parent soient en overflow-x hidden */
 .anim-translate{
     transform: translateX(-2000px);
-    transition: 350ms ease-in-out;
+    transition: 300ms ease-in-out;
 }
 .anim-translate-active{
     transform: translateX(0) !important;
 }
 .anim-translate-right{
     transform: translateX(2000px);
-    transition: 350ms ease-in-out;
+    transition: 300ms ease-in-out;
     overflow-x: hidden !important;
 
 }
 .anim-translate-right-active{
     transform: translateX(0) !important;
+}
+/* opacity active of menu btn */
+.opac{
+    opacity: 0;
+    transition: 500ms;
 }

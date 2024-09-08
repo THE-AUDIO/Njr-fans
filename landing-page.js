@@ -5,7 +5,7 @@ const closeContact = document.querySelector('.closed');
 const listeClub = document.querySelectorAll('.club');
 const audio = document.querySelector(".bi-play-circle");
 const video = document.querySelector("video");
-const viewMenue = document.querySelector('.bi-menu-button');
+const viewMenue = document.querySelector('.bi-list');
 const hiddenMenu = document.querySelector('.bi-x-lg');
 const menue = document.querySelector('.menue-link');
 const animElt = document.querySelectorAll('.anim-translate');
@@ -27,10 +27,14 @@ const adjectifs = [
 // event to show and hidden a menu
 viewMenue.addEventListener('click',()=>{
     menue.classList.add("menue-link-active");
+    hiddenMenu.classList.remove('opac');
+
 })
 
 hiddenMenu.addEventListener('click',()=>{
     menue.classList.remove('menue-link-active');
+    hiddenMenu.classList.add('opac');
+
 })
 
 const link = menue.childNodes;
@@ -81,9 +85,9 @@ audio.addEventListener('click',() => {
 document.addEventListener('scroll', function () {
     animElt.forEach((elt) => {
         const windowHeight = window.innerHeight; // Hauteur intérieure de la fenêtre
-        const clubeTob = elt.getBoundingClientRect().top; // Position du haut de l'élément par rapport au haut de la fenêtre
+        const eltTop = elt.getBoundingClientRect().top; // Position du haut de l'élément par rapport au haut de la fenêtre
         // const clubBottom = elt.getBoundingClientRect().bottom;
-        if (clubeTob <= windowHeight - 500) {
+        if (eltTop <= windowHeight - 300) {
             elt.classList.add('anim-translate-active');
         } else {
             elt.classList.remove('anim-translate-active');
@@ -95,9 +99,9 @@ document.addEventListener('scroll', function () {
 document.addEventListener('scroll', function () {
     animEltRight.forEach((elt) => {
         const windowHeight = window.innerHeight; // Hauteur intérieure de la fenêtre
-        const clubeTob = elt.getBoundingClientRect().top; // Position du haut de l'élément par rapport au haut de la fenêtre
+        const eltTop = elt.getBoundingClientRect().top; // Position du haut de l'élément par rapport au haut de la fenêtre
         // const clubBottom = elt.getBoundingClientRect().bottom;
-        if (clubeTob <= windowHeight - 500) {
+        if (eltTop <= windowHeight - 300) {
             elt.classList.add('anim-translate-right-active');
         } else {
             elt.classList.remove('anim-translate-right-active');
