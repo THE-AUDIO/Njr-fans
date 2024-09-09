@@ -318,20 +318,11 @@ span a:hover{
 .club img{
     overflow: hidden;
     min-height: 300px;
-    max-height: 350px;
-    min-width: 300px;
-    max-width: 350px;
-    width: 310px;
-    height: 310px;
+    max-height: 300px;
+    min-width: 280px;
+    max-width: 280px;
     object-position: center;
-    object-fit: contain;
-}
-.club3 img{
-    max-width: 400px !important;
-    width: 100%;
-}
-.club4 img{
-    width: 100%;
+    object-fit: fill;
 }
 .club h3{
     color: var(--my-white);
@@ -394,7 +385,7 @@ span a:hover{
 .ney-photo{
     position: relative;
     z-index: 33;
-    height: 100vh;
+    height: 120vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -412,6 +403,7 @@ span a:hover{
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 2rem;
+    overflow: hidden;
 }
 .photo-item .photo{
     width: 45%;
@@ -453,6 +445,7 @@ span a:hover{
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
+    
 }
 .ney-tropher h2{
     font-size: 2.2rem;
@@ -486,13 +479,17 @@ span a:hover{
 .desc-tropher{
     position: relative;
     height: 15%;
-    width:40%;
+    width:20%;
     border: 2px solid var(--my-white);
     border-radius: 10px;
     padding: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url('./img/neymar-logo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .desc-tropher p{
     color: var(--my-white);
