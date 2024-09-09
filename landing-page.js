@@ -51,6 +51,7 @@ setInterval(() => {
 // display my contact 
 contactBtn.addEventListener('click', () => {
     contact.classList.toggle('contact-active');
+    
 });
 closeContact.addEventListener('click', () => {
     contact.classList.remove('contact-active');
