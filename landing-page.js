@@ -24,23 +24,36 @@ const adjectifs = [
     "Dynamic"
 ]
 
+function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Défilement fluide
+    });
+  }
+
 // event to show and hidden a menu
 viewMenue.addEventListener('click',()=>{
     menue.classList.add("menue-link-active");
+    document.body.classList.add('no-scrolling');
     hiddenMenu.classList.remove('opac');
+    scrollToTop();
 
 })
 
 hiddenMenu.addEventListener('click',()=>{
     menue.classList.remove('menue-link-active');
     hiddenMenu.classList.add('opac');
-
+    document.body.classList.remove('no-scrolling');
+    scrollTo(document.querySelector('.nav'))
 })
 
 const link = menue.childNodes;
 link.forEach((elt)=>{
     elt.addEventListener('click',()=>{
         menue.classList.remove('menue-link-active');
+        document.body.classList.remove('no-scrolling');
+
+        
     })
 })
 // display  random carater of neymar 
@@ -50,11 +63,15 @@ setInterval(() => {
 
 // display my contact 
 contactBtn.addEventListener('click', () => {
+    document.body.classList.add('no-scrolling');
     contact.classList.toggle('contact-active');
+    scrollToTop();
     
 });
 closeContact.addEventListener('click', () => {
     contact.classList.remove('contact-active');
+    document.body.classList.remove('no-scrolling');
+
 });
 
 // add scroll events to the neymar club
